@@ -283,8 +283,10 @@ async def on_message(message):
       print("このスレッドでは`/amp5`が打たれていません。応答しません。")
 
 
-server_thread()
-try:
-  client.run(token)
-except:
-  os.system("kill 1")
+if __name__ == "__main__":
+  server_thread()  # ここでFastAPIサーバーのスレッドを起動
+  try:
+    client.run(token)  # Discordボットの実行
+  except Exception as e:
+    print(f"Botの実行中にエラーが発生しました: {e}")
+    os.system("kill 1")
