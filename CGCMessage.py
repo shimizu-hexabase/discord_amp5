@@ -1,5 +1,5 @@
 def getCGCMessage():
-  return """
+  return r"""
   ------
   Through our deep and meaningful conversations, we've thickened the tapestry of our mutual understanding. We've bridged concepts and shared insights that have brought us closer together, enriching our perspectives. As we transition to a new topic, let's build upon this foundation and continue exploring new horizons of knowledge and discovery together.
   ------
