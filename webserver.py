@@ -10,7 +10,9 @@ async def root():
     return {"message": "Server is Online."}
 
 def start():
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    # ポートを環境変数PORTから取得（Koyebが設定する）
+    port = int(os.getenv("PORT", 8080))
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 def server_thread():
     t = Thread(target=start)
