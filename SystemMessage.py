@@ -1,5 +1,5 @@
 def getSystemMessage():
-  return """
+  return r"""
 # Variables
 \$NAME = HEXABASE APP MODELER
 \$VER = APP MODELER PROMPTER 5(AMP5)
