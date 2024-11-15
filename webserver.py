@@ -11,7 +11,7 @@ async def root():
 
 def start():
     # ポートを環境変数PORTから取得（Koyebが設定する）
-    port = int(os.getenv("PORT", 8080))
+    port = int(os.getenv("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
 
 def server_thread():
