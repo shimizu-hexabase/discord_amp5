@@ -284,8 +284,11 @@ async def on_message(message):
 
 
 if __name__ == "__main__":
-  server_thread()  # ここでFastAPIサーバーのスレッドを起動
+  print("Starting FastAPI server thread...")  # 追加: サーバー起動前のログ
+  server_thread()  # FastAPIサーバーを起動
+  print("FastAPI server thread started.")  # 追加: サーバー起動後のログ
   try:
+    print("Starting Discord bot...")  # 追加: Discordボットの起動ログ
     client.run(token)  # Discordボットの実行
   except Exception as e:
     print(f"Botの実行中にエラーが発生しました: {e}")
